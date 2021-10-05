@@ -25,7 +25,7 @@
       "kind": "StorageV2",
       "properties": {
         "supportsHttpsTrafficOnly": true
-      }
+      },
       "copy": {
         "name": "storagecopy",
         "count": "[parameters('storageCount')]"

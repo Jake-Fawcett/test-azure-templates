@@ -7,10 +7,6 @@
     },
     "location": {
       "type": "string"
-    },
-    "storageCount": {
-      "type": "int",
-      "defaultValue": 5
     }
   },
   "resources": [
@@ -25,10 +21,6 @@
       "kind": "StorageV2",
       "properties": {
         "supportsHttpsTrafficOnly": true
-      },
-      "copy": {
-        "name": "storagecopy",
-        "count": "[parameters('storageCount')]"
       }
     }
   ],

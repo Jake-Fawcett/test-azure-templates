@@ -55,7 +55,7 @@
         },
         "parameters": {
           "storageAccountName": {
-            "value": "[variables('storageAccountName')]"
+            "value": "[concat(variables('storageAccountName'), copyindex())]"
           },
           "location": {
             "value": "[parameters('location')]"

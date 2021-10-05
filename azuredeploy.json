@@ -32,7 +32,7 @@
     }
   },
   "variables": {
-    "uniqueStorageName": "[concat(parameters('storagePrefix'), uniqueString(resourceGroup().id))]",
+    "storageAccountName": "[concat(parameters('storagePrefix'), uniqueString(resourceGroup().id))]",
     "webAppPortalName": "[concat(parameters('webAppName'), uniqueString(resourceGroup().id))]"
   },
   "resources": [
@@ -47,7 +47,7 @@
         },
         "parameters": {
           "storageAccountName": {
-            "value": "[variables('uniqueStorageName')]"
+            "value": "[variables('storageAccountName')]"
           },
           "location": {
             "value": "[parameters('location')]"
@@ -97,11 +97,11 @@
   "outputs": {
     "storageName": {
       "type": "string",
-      "value": "[variables('uniqueStorageName')]"
+      "value": "[variables('storageAccountName')]"
     },
     "storageEndpoint": {
       "type": "object",
-      "value": "[reference(variables('uniqueStorageName')).primaryEndpoints]"
+      "value": "[reference(variables('storageAccountName')).primaryEndpoints]"
     }
   }
 }

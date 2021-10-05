@@ -23,6 +23,10 @@
       "type": "string",
       "defaultValue": "php|7.0"
     },
+    "storageCount": {
+      "type": "int",
+      "defaultValue": 5
+    },
     "resourceTags": {
       "type": "object",
       "defaultValue": {
@@ -40,6 +44,10 @@
       "name": "linkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2021-04-01",
+      "copy": {
+        "name": "storagecopy",
+        "count": "[parameters('storageCount')]"
+      },
       "properties": {
         "mode": "Incremental",
         "templateLink": {

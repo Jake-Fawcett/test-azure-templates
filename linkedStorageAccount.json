@@ -8,14 +8,18 @@
     "location": {
       "type": "string"
     },
-    "storageAccountType": {
+    "storageSKU": {
       "type": "string",
       "defaultValue": "Standard_LRS",
       "allowedValues": [
         "Standard_LRS",
         "Standard_GRS",
+        "Standard_RAGRS",
         "Standard_ZRS",
-        "Premium_LRS"
+        "Premium_LRS",
+        "Premium_ZRS",
+        "Standard_GZRS",
+        "Standard_RAGZRS"
       ]
     }
   },
@@ -26,7 +30,7 @@
       "name": "[parameters('storageAccountName')]",
       "location": "[parameters('location')]",
       "sku": {
-        "name": "[parameters('storageAccountType')]"
+        "name": "[parameters('storageSKU')]"
       },
       "kind": "StorageV2",
       "properties": {
@@ -37,7 +41,7 @@
   "outputs": {
     "storageName": {
       "type": "string",
-      "value": "parameters('storageAccountName')"
+      "value": "[parameters('storageAccountName')]"
     },
     "storageEndpoint": {
       "type": "object",

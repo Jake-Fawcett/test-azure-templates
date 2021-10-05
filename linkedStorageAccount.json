@@ -16,6 +16,7 @@
       "name": "[parameters('storageAccountName')]",
       "location": "[parameters('location')]",
       "kind": "StorageV2",
+      "sku": "Standard_LRS",
       "properties": {
         "supportsHttpsTrafficOnly": true
       }

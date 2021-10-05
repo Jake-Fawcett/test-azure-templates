@@ -13,7 +13,7 @@
     {
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2021-04-01",
-      "name": "[concat(parameters('storageAccountName'), copyIndex())]",
+      "name": "[parameters('storageAccountName')]",
       "location": "[parameters('location')]",
       "sku": {
         "name": "Standard_LRS"

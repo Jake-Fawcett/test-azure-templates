@@ -18,6 +18,10 @@
       "sku": {
         "name": "Standard_LRS"
       },
+      "copy": {
+        "name": "storagecopy",
+        "count": 5
+      },
       "kind": "StorageV2",
       "properties": {
         "supportsHttpsTrafficOnly": true

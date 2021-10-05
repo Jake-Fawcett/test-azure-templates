@@ -23,10 +23,6 @@
       "type": "string",
       "defaultValue": "php|7.0"
     },
-    "storageCount": {
-      "type": "int",
-      "defaultValue": 5
-    },
     "resourceTags": {
       "type": "object",
       "defaultValue": {
@@ -46,7 +42,7 @@
       "apiVersion": "2021-04-01",
       "copy": {
         "name": "storagecopy",
-        "count": "[parameters('storageCount')]"
+        "count": 5
       },
       "properties": {
         "mode": "Incremental",

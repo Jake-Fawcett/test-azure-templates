@@ -93,15 +93,5 @@
         }
       }
     }
-  ],
-  "outputs": {
-    "storageName": {
-      "type": "string",
-      "value": "[variables('storageAccountName')]"
-    },
-    "storageEndpoint": {
-      "type": "object",
-      "value": "[reference(variables('storageAccountName')).primaryEndpoints]"
-    }
-  }
+  ]
 }

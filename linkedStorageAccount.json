@@ -13,7 +13,7 @@
     {
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2021-04-01",
-      "name": "[parameters('uniqueStorageName')]",
+      "name": "[parameters('storageAccountName')]",
       "location": "[parameters('location')]",
       "kind": "StorageV2",
       "properties": {

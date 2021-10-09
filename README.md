@@ -1,2 +1,3 @@
 # azure-templates
-Repo testing ARM templates.
+
+Repo testing Azure ARM templates and Bicep.
